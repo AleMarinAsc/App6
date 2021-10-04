@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App6.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" CornerRadius="0">
+            <Label Text="Login" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Ingresa tus datos" FontSize="Title" Padding="10"/>
+        <Entry Text="{Binding Correo}"/>
+        <Entry IsPassword="true" Text="{Binding Password}"/>
+        <Button Text="Login" Command="{Binding GoToViewIndex}"></Button>
+        <Label Text="Correo o contraseña incorrectos" TextColor="Red" IsVisible="{Binding IsErrorLogin}" FontSize="18" Padding="10"/>
+    </StackLayout>
+
+</ContentPage>
